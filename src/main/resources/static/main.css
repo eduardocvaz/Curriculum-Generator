@@ -507,7 +507,7 @@ audio,
 iframe,
 embed,
 object {
-    display: block;
+    /*display: block;*/
     vertical-align: middle;
 }
 
@@ -663,16 +663,59 @@ video {
     width: 100%;
 }
 
-.mainPage {
+.bodyPage {
     display: flex;
     border: #f1f1f1 solid 1px;
-    margin: 0;
-    padding: 0;
+    /*grid-template-columns: minmax(250px, 2fr) 4fr;*/
+
+
+}
+.mainPage {
+    flex: 5 4 150px;
+}
+
+.sidePage {
+    background-color: rgb(183, 24, 214);
+    margin-right: 10px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    flex: 1 1 150px;
+
+}
+.headPage {
+    margin: 15px;
+    display: flex;
+    /*justify-content: space-between;*/
+    justify-content: space-around;
+    /*justify-content: flex-end;*/
+}
+.name {
+    /*flex: 1 1 150px;*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /*flex: 1 1 150px;*/
+    /*justify-content: flex-end;*/
+}
+
+
+.foto {
+    max-width:200px;
+    max-height:100px;
+    width: auto;
+    height: auto;
+
 }
 
 .container {
     display: flex;
-    flex-direction: row;
+    /*flex-direction: row;*/
 }
 .periodo {
     padding: 10px;
@@ -685,17 +728,9 @@ video {
     margin-left: 10px;
 }
 
-.foto {
-    display: block;
-    width:50%;
-    height:50%;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-}
-.name h1{
-    text-align: center;
+.name h2{
+    padding-top: 30px;
+    padding-bottom: 30px;
     font-size: 30px;
     font-weight: bold;
 }
@@ -723,13 +758,8 @@ video {
     color: #bb5dab;
     border: #bb5dab solid 1px;
 }
-aside {
-    background-color: rgb(183, 24, 214);
-    margin-right: 10px;
-    border-radius: 5px;
-    padding-bottom: 10px;
-}
-aside p, aside h1, aside strong{
+
+.sidePage p, .sidePage h1, .sidePage strong{
     color: white;
     margin: 10px;
 }
@@ -760,27 +790,6 @@ ul li:before {
     border-radius: 50%;
 }
 
-/* Three column layout */
-.side {
-    float: left;
-    width: 30%;
-    margin-top: 8px;
-}
-
-.middle {
-    float: right;
-    width: 70%;
-    margin-top: 8px;
-}
-
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 .experience-title {
     font-size: 1.1rem;
     font-weight: 700;
@@ -790,5 +799,6 @@ ul li:before {
     font-weight: 400;
     color: #7e8996;
 }
+
 
 @page { margin:0!important; padding:0!important}
