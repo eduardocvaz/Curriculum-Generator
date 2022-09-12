@@ -1,3 +1,9 @@
+:root {
+    --primary: #7e8996;
+}
+
+
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -73,7 +79,7 @@ pre {
  */
 
 a {
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 /**
@@ -144,7 +150,10 @@ sup {
  */
 
 img {
-    border-style: none;
+    width:100px;
+    height:100px;
+    border:solid 1px;
+    border-radius:0px 20px 0px 20px;
 }
 
 /* Forms
@@ -342,12 +351,6 @@ fieldset {
     padding: 0;
 }
 
-ol,
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 
 /**
  * Tailwind custom reset styles
@@ -533,7 +536,7 @@ video {
 }
 
 .rounded {
-    border-radius: 0.25rem;
+    border-radius:0px 20px 0px 20px;
 }
 
 .rounded-lg {
@@ -585,7 +588,9 @@ video {
 }
 
 .h-screen {
-    height: 100vh;
+    height: calc(100%);
+    /*margin-top: 20px;*/
+    /*margin-bottom: 20px;*/
 }
 
 .text-xl {
@@ -663,6 +668,15 @@ video {
     width: 100%;
 }
 
+.page-full {
+    border-radius: 0.5rem;
+    border-width: 1px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /*width: 70%;*/
+
+
+}
+
 .bodyPage {
     display: flex;
     border: #f1f1f1 solid 1px;
@@ -672,22 +686,24 @@ video {
 }
 .mainPage {
     flex: 5 4 150px;
+    margin-right: 5px;
 }
 
 .sidePage {
-    background-color: rgb(183, 24, 214);
+    background-color: var(--primary);
     margin-right: 10px;
-    border-radius: 5px;
+    border-radius:0px 20px 0px 20px;
     padding-bottom: 10px;
     flex: 1 1 150px;
-
 }
 .headPage {
-    margin: 15px;
+    margin: 5px;
+    padding: 5px;
     display: flex;
-    /*justify-content: space-between;*/
     justify-content: space-around;
-    /*justify-content: flex-end;*/
+    color: var(--primary);
+    border: var(--primary) solid 1px;
+    border-radius:0px 20px 0px 20px;
 }
 .name {
     /*flex: 1 1 150px;*/
@@ -714,13 +730,16 @@ video {
 }
 
 .container {
+    margin: 10px;
     display: flex;
     /*flex-direction: row;*/
+    border: var(--primary) solid 0.5px;
+    border-radius:0px 20px 0px 20px;
 }
 .periodo {
     padding: 10px;
     flex: 1;
-    border: #bb5dab solid 1px;
+    border: var(--primary) solid 1px;
 }
 .description {
     padding: 10px;
@@ -749,14 +768,18 @@ video {
 
 }
 .education h1{
+    font-size: 1.2rem;
     padding: 10px;
-    color: #bb5dab;
-    border: #bb5dab solid 1px;
+    color: var(--primary);
+    border: var(--primary) solid 1px;
+    border-radius:0px 20px 0px 20px;
 }
 .experience h1{
+    font-size: 1.2rem;
     padding: 10px;
-    color: #bb5dab;
-    border: #bb5dab solid 1px;
+    color: var(--primary);
+    border: var(--primary) solid 1px;
+    border-radius:0px 20px 0px 20px;
 }
 
 .sidePage p, .sidePage h1, .sidePage strong{
@@ -764,41 +787,100 @@ video {
     margin: 10px;
 }
 
-ul {
-    display: block;
-    margin-left: 10px;
-}
 
-ul li {
-    display: block;
-    position: relative;
-}
 
-ul li:not(:last-child) {
-    margin-bottom: 16px;
-}
 
-ul li:before {
+li::before {
     content: "";
     position: absolute;
-    top: 1.2em;
-    left: -30px;
-    margin-top: -.9em;
-    background: #f69ec4;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
+    left: 0;
+    top: 6px;
+    height: 10px;
+    width: 10px;
+    border-width: 5px 5px 0 0;
+    transform: rotate(45deg);
+    background: #777777;
+    color: #38a169;
 }
 
-.experience-title {
-    font-size: 1.1rem;
+ul {
+    line-height: 1.5em;
+    margin: 5px 0 15px;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    position: relative;
+    padding: 0 0 0 20px;
+}
+
+/*ul li:not(:last-child) {*/
+/*    !*margin-bottom: 16px;*!*/
+/*}*/
+
+/*ul li:before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 1.2em;*/
+/*    left: -20px;*/
+/*    margin-top: -.9em;*/
+/*    background: #777777;*/
+/*    height: 10px;*/
+/*    width: 10px;*/
+/*    border-radius: 50%;*/
+/*}*/
+
+/*.experience-title {*/
+/*    font-size: 1.1rem;*/
+/*    font-weight: 700;*/
+/*}*/
+/*.experience-title h3 {*/
+/*    font-size: 0.9rem;*/
+/*    font-weight: 700;*/
+/*}*/
+
+.description h2 {
+    font-size: 1.2rem;
     font-weight: 700;
 }
+.description h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+.description p {
+    text-indent: 1.1em;
+    padding-left:10px
+}
+
 
 .date-range {
     font-weight: 400;
     color: #7e8996;
 }
 
+.description a {
+    color: #668fbb;
+    text-decoration: underline;
+}
+
+.education ul li {
+    width: 300px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.education ul li:nth-child(odd) {
+    float:left;
+}
+
+.colunasList {
+
+}
 
 @page { margin:0!important; padding:0!important}
+@media print {
+    .new-page {
+        page-break-before: always;
+    }
+}
