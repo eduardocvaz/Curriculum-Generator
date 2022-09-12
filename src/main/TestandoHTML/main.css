@@ -672,7 +672,7 @@ video {
     border-radius: 0.5rem;
     border-width: 1px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    /*width: 70%;*/
+    width: 70%;
 
 
 }
@@ -694,7 +694,7 @@ video {
     margin-right: 10px;
     border-radius:0px 20px 0px 20px;
     padding-bottom: 10px;
-    flex: 1 1 150px;
+    flex: 1 1 170px;
 }
 .headPage {
     margin: 5px;
@@ -813,6 +813,7 @@ li {
     list-style: none;
     position: relative;
     padding: 0 0 0 20px;
+    margin: 2px;
 }
 
 /*ul li:not(:last-child) {*/
@@ -877,6 +878,74 @@ li {
 .colunasList {
 
 }
+
+.rodape {
+    display: block;
+    float: right;
+    margin-right: 10px;
+}
+
+.skills h1{
+    font-size: 25px;
+}
+.skills div {
+    color: white;
+}
+.skills {
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.skills-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.side {
+    float: left;
+    width: 40%;
+    margin-top: 5px;
+}
+
+.middle {
+    float: right;
+    width: 60%;
+    margin-top: 5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The bar container */
+.bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Individual bars */
+.bar-1 {width: 85%; height: 18px; background-color: #9adbdb;}
+.bar-2 {width: 87%; height: 18px; background-color: #9adbdb;}
+.bar-3 {width: 30%; height: 18px; background-color: #9adbdb;}
+.bar-4 {width: 15%; height: 18px; background-color: #9adbdb;}
+.bar-5 {width: 75%; height: 18px; background-color: #9adbdb;}
+.bar-6 {width: 55%; height: 18px; background-color: #9adbdb;}
+.bar-7 {width: 70%; height: 18px; background-color: #9adbdb;}
+.bar-8 {width: 65%; height: 18px; background-color: #9adbdb;}
+.bar-9 {width: 70%; height: 18px; background-color: #9adbdb;}
+.bar-10 {width: 65%; height: 18px; background-color: #9adbdb;}
+.bar-11 {width: 50%; height: 18px; background-color: #9adbdb;}
+.bar-12 {width: 70%; height: 18px; background-color: #9adbdb;}
+.bar-13 {width: 45%; height: 18px; background-color: #9adbdb;}
+.bar-14 {width: 35%; height: 18px; background-color: #9adbdb;}
+.bar-15 {width: 45%; height: 18px; background-color: #9adbdb;}
+.bar-16 {width: 80%; height: 18px; background-color: #9adbdb;}
+.bar-17 {width: 75%; height: 18px; background-color: #9adbdb;}
 
 @page { margin:0!important; padding:0!important}
 @media print {
